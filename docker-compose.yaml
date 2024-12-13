@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mongo:5.0.0
+    restart: always
+    ports:
+      - 29017:27017
+    environment:
+      MONGODB_DATABASE: nest-peniche
+    volumes:
+      - ./mongo:/data/db
